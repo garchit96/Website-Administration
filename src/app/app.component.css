@@ -1,0 +1,21 @@
+/* #home{
+    background: url('/assets/background.jpg') no-repeat center center fixed;
+    height:100%;
+    position: relative;
+    width:100%;
+    background-size: cover;;
+
+
+
+} */
+
+header {
+    height:180vh;
+    min-height:400px;
+    background-size:cover;
+    background-image:url('/assets/bg3.jpg');
+}
+
+/* .hidden-spacer {
+    height: 56px
+} */

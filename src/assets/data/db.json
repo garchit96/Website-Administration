@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "FullName": "Thomson",
+      "email": "Thomson@gmail.com",
+      "PhoneNumber": "9009908900",
+      "Address": "California",
+      "GroupName":"group1"
+    },
+    {
+      "id": 2,
+      "FullName": "arc",
+      "email": "arc@123",
+      "PhoneNumber": "9118689432",
+      "Address": "Rajasthan",
+      "GroupName":"group1"
+    },
+    {
+      "id": 3,
+      "FullName": "sam",
+      "email": "tom@123",
+      "PhoneNumber": "9229689432",
+      "Address": "Uttrakhand",
+      "GroupName":"group2"
+    },
+    {
+      "id": 4,
+      "FullName": "Robinson",
+      "email": "robin@123",
+      "PhoneNumber": "9339689432",
+      "Address": "Kerala",
+      "GroupName":"group2"
+    }
+  ],
+  "usergroups": [
+    {
+      "id": 1,
+      "GroupName": "group1",
+      "email": "group1@gmail.com"
+    },
+    {
+      "id": 2,
+      "GroupName": "group2",
+      "email": "group2@gmail.com"
+      
+    },
+    {
+      "id": 3,
+      "GroupName": "group3",
+      "email": "group3@gmail.com"
+     
+    },
+    {
+      "id": 4,
+      "GroupName": "Group4",
+      "email": "group4@gmail"
+    }
+  ]
+}
