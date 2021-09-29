@@ -6,7 +6,7 @@ export interface Users{
     name:string;
     email:string;
     address:string;
-    group_id?:number;
+    // group_id?:number;
     usergroup:UserGroups;
-    // group:string;
+    // groupName?:string;
 }

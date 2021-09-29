@@ -1,7 +1,6 @@
 export class userGroupModel{
-    group_id: number=0;
+    group_id?: number;
     name:string='';
     email:string='';
-    
-    
+
 }

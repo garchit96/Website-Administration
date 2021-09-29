@@ -16,7 +16,7 @@ import { UserGroups } from '../usergroups';
 })
 export class UserGroupsComponent implements OnInit {
   formValue :FormGroup;
-  userGroupObj :userGroupModel= new userGroupModel();
+  userGroupObj :userGroupModel;
   allUserGroups:UserGroups[];
   showAdd=false;
   showUpdate=true;
@@ -63,8 +63,12 @@ export class UserGroupsComponent implements OnInit {
   }
 
   addUserGroup(){
-    this.userGroupObj.name=this.formValue.value.name;
-    this.userGroupObj.email=this.formValue.value.email;
+    this.userGroupObj = {
+      name: this.formValue.value.name,
+      email: this.formValue.value.email
+    }
+    // this.userGroupObj.name=this.formValue.value.name;
+    // this.userGroupObj.email=this.formValue.value.email;
   
     this.manageusergroups.createUserGroup(this.userGroupObj)
     .subscribe(res=>{

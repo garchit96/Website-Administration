@@ -18,7 +18,7 @@
         <th scope="col"> <i class="fa fa-user-circle-o" aria-hidden="true"></i> Name</th>
         <th scope="col"> <i class="fa fa-envelope" aria-hidden="true"></i> Email</th>
         <th scope="col"> <i class="fa fa-map-marker" aria-hidden="true"></i> Address</th>
-        <th scope="col"> <i class="fa fa-users" aria-hidden="true"></i> Group Id</th>
+        <th scope="col"> <i class="fa fa-users" aria-hidden="true"></i> Group Name</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -28,7 +28,7 @@
         <td>{{user.name}}</td>
         <td>{{user.email}}</td>
         <td>{{user.address}}</td>
-        <td>{{user.group_id}}</td>
+        <td>{{user.usergroup?.name}}</td>
         <td class="text-center">
           <button [disabled]="user.lock" class="btn btn-danger" (click)="deleteUser(user.user_id)"> <i
               class="fa fa-trash" aria-hidden="true"></i></button>&nbsp;
@@ -85,9 +85,12 @@
           </div>
           <div *ngIf="!router.url.includes('helpdesk')" class="form-row">
             <div class="form-group col">
-              <label>Group Id</label>
-              <input type="text" formControlName="group_id" class="form-control" />
-              <span class="error" *ngIf="group_id.invalid && (group_id.touched || group_id.dirty)">Enter valid Group
+              <label>Group Name</label><br/>
+              <select formControlName="groupName">
+                <option  *ngFor="let group of groups;" [name]="group.name" [value]="group.name">{{group.name}}</option>
+              </select>
+              <!-- <input type="text" formControlName="groupName" class="form-control" /> -->
+              <span class="error" *ngIf="groupName.invalid && (groupName.touched || groupName.dirty)">Enter valid Group
               </span>
             </div>
 

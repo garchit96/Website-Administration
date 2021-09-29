@@ -6,8 +6,6 @@ export class userModel {
     email: string = '';
     address: string = '';
     // group_id?:number;
-    usergroup: {
-        group_id?: number
-    };
+    usergroup?:UserGroups;
 
 }

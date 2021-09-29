@@ -22,17 +22,17 @@ export class ManageUserGroupsService {
   
   
   viewAllUserGroups(): Observable<UserGroups[]>{
-    const userGroupUrl='http://localhost:9090/service/usergroups';
+    const userGroupUrl='http://localhost:8082/service/usergroups';
     return this.httpClient.get<UserGroups[]>(userGroupUrl);
   }
 
   deleteUserGroup(id:number):Observable<any>{
-    const userGroupUrl='http://localhost:9090/service/usergroups/removeUsergroup';
+    const userGroupUrl='http://localhost:8082/service/usergroups/removeUsergroup';
     return this.httpClient.delete<UserGroups>(userGroupUrl+'/'+id);//return observable
   }
   
   createUserGroup(usergroup:userGroupModel):Observable<UserGroups>{
-    const userGroupUrl='http://localhost:9090/service/usergroups/addUsergroup';
+    const userGroupUrl='http://localhost:8082/service/usergroups/addUsergroup';
     return this.httpClient.post<UserGroups>(userGroupUrl, usergroup);//return observable
   }
 
@@ -43,12 +43,12 @@ export class ManageUserGroupsService {
   
 
   updateUserGroup(data:any, id:number):Observable<UserGroups>{
-    const userGroupUrl='http://localhost:9090/service/usergroups/updateUsergroup';
+    const userGroupUrl='http://localhost:8082/service/usergroups/updateUsergroup';
     return this.httpClient.put<UserGroups>(userGroupUrl + '/'+id, data);//return observable
   }
 
   viewAllGroupUsers(id:number):Observable<Users[]>{
-    const userGroupUrl='http://localhost:9090/service/users/ofGroup';
+    const userGroupUrl='http://localhost:8082/service/users/ofGroup';
     return this.httpClient.get<Users[]>(userGroupUrl+'/'+ id);
   }
 }
